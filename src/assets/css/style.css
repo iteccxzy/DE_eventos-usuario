@@ -1,0 +1,433 @@
+/* estilos generales */
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-image: url("../img/slant-right.png");
+}
+
+
+/* cabecera */
+
+#header {
+    min-width: 1024px;
+    width: 100%;
+    height: 130px;
+    margin: 0px auto;
+}
+
+
+/* logotipo */
+
+#header #logotipo {
+    width: 40%;
+    height: 50%;
+    margin: 0px auto;
+    float: left;
+}
+
+#header #logotipo img {
+    display: block;
+    margin: 0px auto;
+    width: 80px;
+    margin-left: 60%;
+}
+
+
+/* titulo */
+
+#header h1 {
+    width: 60%;
+    height: 50%;
+    text-align: left;
+    font-size: 45px;
+    font-family: 'Share Tech Mono', monospace;
+    text-transform: capitalize;
+    letter-spacing: 4px;
+    text-shadow: 0px 2px 1px #333333;
+    transition: all 300ms;
+    float: left;
+}
+
+#header h1:hover {
+    text-shadow: 0px 2px 1px #333333, 0px 0px 4px #68aea2;
+}
+
+#header h1 a {
+    color: #68aea2;
+    text-decoration: none;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+
+/* barra de navegacion */
+
+#nav {
+    display: block;
+    width: 100%;
+    height: 33%;
+    background-color: #333333;
+    color: white;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 14px;
+    box-shadow: 0px 0px 2px gray;
+    margin: 0px auto;
+}
+
+#nav ul {
+    list-style: none;
+    text-decoration: none;
+    margin: auto;
+    width: auto;
+    margin-left: 23%;
+}
+
+#nav>ul>li {
+    line-height: 40px;
+    float: left;
+    border-right: 1px solid gray;
+    transition: all 300ms;
+}
+
+#nav>ul>li a {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+#nav>ul>li>a:first-child {
+    border-left: 1px solid grey;
+}
+
+#nav>ul>li:hover {
+    background-color: #68aea2;
+    box-shadow: 0px 0px 4px green inset;
+}
+
+
+/*  desplegable*/
+
+#nav>ul>li>ul {
+    display: none;
+    position: absolute;
+    width: 160px;
+    box-shadow: 0px 2px 2px gray;
+    z-index: 1;
+}
+
+#nav>ul>li:hover>ul {
+    display: block;
+}
+
+#nav>ul>li:hover>ul>li {
+    background-color: #f2f1f0;
+    border-bottom: 1px solid #d6d6d6;
+    padding: 8px;
+    line-height: 25px;
+    font-size: 13px;
+    transition: all 300ms;
+}
+
+#nav>ul>li:hover>ul>li a {
+    color: #666666;
+}
+
+#nav>ul>li:hover>ul>li:hover {
+    box-shadow: 0px 0px 2px #ccc inset;
+    background: rgb(238, 237, 237);
+}
+
+
+/*   Contenido*/
+
+#contenido {
+    width: 55%;
+    min-height: 450px;
+    background-color: #f2f0f0;
+    margin: 0px auto;
+    padding: 20px;
+    background: #74cfbf;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+}
+
+
+/* tabla grid listado*/
+
+#table1 {
+    font-family: 'Share Tech Mono';
+    min-width: 60%;
+    margin: 0px auto;
+    margin-top: 25px;
+    /* border: 1px solid #ffffff; */
+    text-align: center;
+    border-collapse: collapse;
+    margin-right: 50%;
+}
+
+table thead {
+    background: #387167;
+}
+
+table thead th {
+    font-size: 17px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    border-left: 2px solid #ffffff;
+}
+
+table thead th:first-child {
+    border-left: none;
+}
+
+table td,
+table th {
+    border: 1px solid #ffffff;
+    padding: 3px 2px;
+}
+
+table tbody td {
+    font-size: 13px;
+    background: #d0e4f5;
+    border: solid 1px aliceblue;
+}
+
+
+/* formularios */
+
+#conf_form {
+    display: block;
+    font-family: 'Share Tech Mono';
+    max-width: 50%;
+    min-height: 320px;
+    margin-top: 25px;
+    background: #ebebeb;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.btn-guardar {
+    background-color: #68aea2;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    text-transform: capitalize;
+    border-radius: 5px;
+}
+
+
+/* titulos */
+
+h2,
+h3 {
+    text-align: left;
+    text-transform: capitalize;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+select,
+input,
+textarea {
+    margin-top: 15px !important;
+}
+
+#footer {
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-family: 'Share Tech Mono';
+}
+
+#footer p {
+    margin-bottom: 0px !important;
+}
+
+.requerido {
+    font-size: small;
+    margin: 3px;
+}
+
+.active {
+    background-color: #68aea2;
+    box-shadow: 0px 0px 4px green inset;
+}
+
+
+/* rsponsive */
+
+
+/* ------------------------- 900 px */
+
+@media (max-width:900px) {
+    #header {
+        min-width: 900px;
+    }
+    #header #logotipo {
+        width: 33%;
+    }
+    #nav ul {
+        margin-left: 22%;
+    }
+}
+
+
+/* ------------------------- 800 px */
+
+@media (max-width:800px) {
+    #header {
+        min-width: 800px;
+    }
+    .noneclass {
+        display: none;
+    }
+    #header h1 {
+        font-size: 30px;
+    }
+    #conf_form {
+        max-width: 60%;
+    }
+}
+
+
+/* ------------------------- 700 px */
+
+@media (max-width:700px) {
+    #header {
+        min-width: 700px;
+        height: 90px;
+    }
+    #header #logotipo {
+        display: none;
+    }
+    #header h1 {
+        text-align: center;
+        width: 100%;
+    }
+    #nav {
+        height: 44%;
+    }
+    #nav ul {
+        margin-left: 23%;
+    }
+    #contenido {
+        margin-top: 2%;
+    }
+    #conf_form {
+        max-width: 70%;
+    }
+}
+
+
+/* ------------------------- 650 px */
+
+@media (max-width: 650px) {
+    #header {
+        min-width: 650px;
+    }
+    #table1 {
+        margin-right: auto;
+    }
+    #conf_form {
+        max-width: 80%;
+    }
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+    /* oculta */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    /* separa filas */
+    tr {
+        margin: 0 0 1rem 0;
+    }
+    /* contenido de cabecera */
+    td {
+        position: relative;
+        width: 80%;
+    }
+    td:before {
+        position: absolute;
+        left: 6px;
+        padding-right: 20%;
+        text-align: justify;
+    }
+    /* conenido head */
+    td:nth-of-type(1):before {
+        content: "Carrera:";
+    }
+    td:nth-of-type(2):before {
+        content: "Materia:";
+    }
+    td:nth-of-type(3):before {
+        content: "Profesor:";
+    }
+    td:nth-of-type(4):before {
+        content: "Fecha:";
+    }
+    td:nth-of-type(5):before {
+        content: "Hora:";
+    }
+}
+
+
+/* ------------------------- 575 px */
+
+@media (max-width: 575px) {
+    #header {
+        min-width: 575px;
+    }
+    #nav ul {
+        margin-left: 21%;
+    }
+    #header h1 {
+        width: 90%;
+    }
+    #contenido {
+        width: 55%;
+    }
+    td {
+        width: auto;
+    }
+}
+
+
+/* ------------------------- 500 px */
+
+@media (max-width: 500px) {
+    #header h1 {
+        width: 70%;
+    }
+    #nav ul {
+        margin-left: 10%;
+    }
+    #contenido {
+        width: 75%;
+    }
+}

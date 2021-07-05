@@ -1,0 +1,89 @@
+<div class="container" style="min-height:500px">
+  <div class="row justify-content-md-center p-1">
+    <div class="col-6">
+      <div class="card" style="height: 35rem; background-color: rgb(245, 252, 254)">
+        <div class="card-body">
+          <div id="contenido">
+            <h3>Nuevo Evento</h3>
+            <!-- nombre trae de docentes -->
+
+            <div id="conf_form">
+              <div>
+                <select
+                  class="form-select mt-4"
+                  v-model="selectedDocente"
+                  v-on:change="tmaterias($event)"
+                >
+                  <option value="" selected disabled>
+                    seleccione docente
+                  </option>
+                  <option
+                    v-for=" (docente, index) in docentes"
+                    :value="docentes[index].docente_id"
+                    v-bind:key="docentes.docente_id"
+                  >
+                    {{ docentes[index].nombre}} {{ docentes[index].apellidos}}
+                  </option>
+                </select>
+              </div>
+
+              <!-- nombre trae de materias -->
+              <div>
+                <select class="form-select mt-4" v-model="selectedMateria">
+                  <option value="" selected disabled>seleccione materia</option>
+                  <option
+                    v-for="(materia, index) in materias"
+                    :value="materias[index].materia_id"
+                    v-bind:key="index"
+                  >
+                    {{ materias[index].descripcion}}
+                  </option>
+                </select>
+              </div>
+
+              <!-- nombre array de dias -->
+              <div>
+                <select class="form-select mt-4" v-model="selectedDia ">
+                  <option value="" selected disabled>seleccione dia </option>
+                  <option
+                    v-for="(dia, index) in dias"
+                    :value="dias[index].dia"
+                    v-bind:key="dias.dia"
+                  >
+                    {{dias[index].dia}}
+                  </option>
+                </select>
+              </div>
+
+              <!-- nombre trae de horarios -->
+              <div>
+                <select class="form-select mt-4" v-model="selectedHora">
+                  <option value="" selected disabled>seleccione hora</option>
+                  <option
+                    v-for="(horario, index) in horarios"
+                    :value="horarios[index].horario_id"
+                    v-bind:key="horarios[index].horario_id"
+                  >
+                    {{ horarios[index].hora}}
+                  </option>
+                </select>
+              </div>
+
+              <!-- <p>Seleccionado: </p>
+                        <p> {{selectedDocente}} </p>
+                        <p> {{selectedMateria}} </p>
+                        <p>{{selectedDia}} </p>
+                        <p>{{selectedHora}} </p> -->
+              <input
+                class="btn btn-secondary mt-4"
+                type="submit"
+                v-on:click="save"
+                value="enviar"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

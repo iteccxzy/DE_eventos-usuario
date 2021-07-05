@@ -1,0 +1,88 @@
+<div class="container" style="min-height:500px">
+  <div class="row justify-content-md-center p-1">
+    <div class="col-6">
+      <div class="card" style="height: 35rem; background-color: rgb(245, 252, 254)">
+        <div class="card-body">
+          <div id="contenido">
+            <h3>Contacto</h3>
+
+            <form id="conf_form" v-on:submit.prevent="enviaMail">
+              <div>
+                <!-- <label for="nombre">Nombre</label> -->
+                <input
+                  class="form-control mt-4"
+                  placeholder="nombre..."
+                  type="text"
+                  name="nombre"
+                  v-model="user.nombre"
+                />
+                <div
+                  class="requerido"
+                  v-if="!$v.user.nombre.required && user.nombre"
+                >
+                  El nombre es requerido
+                </div>
+                <div class="requerido" v-if="!$v.user.nombre.minLength">
+                  El nombre es muy corto
+                </div>
+              </div>
+
+              <div>
+                <!-- <label for="email">Email</label> -->
+                <input
+                  class="form-control mt-4"
+                  placeholder="email..."
+                  type="email"
+                  name="email"
+                  v-model="user.email"
+                />
+                <div
+                  class="requerido"
+                  v-if="!$v.user.email.required && user.email"
+                >
+                  El email es requerido
+                </div>
+                <div class="requerido" v-if="!$v.user.email.email">
+                  El email es requerido
+                </div>
+              </div>
+
+              <div>
+                <!-- <label for="mensaje">Mensaje</label> -->
+                <textarea
+                  class="form-control mt-4"
+                  placeholder="mensaje..."
+                  name="mensaje"
+                  v-model="user.mensaje"
+                ></textarea>
+                <div
+                  class="requerido"
+                  v-if="!$v.user.mensaje.required && user.mensaje"
+                >
+                  El mensaje es requerido
+                </div>
+                <div class="requerido" v-if="!$v.user.mensaje.minLength">
+                  El mensaje es requerido
+                </div>
+              </div>
+
+              <div>
+                <button
+                  class="btn btn-secondary mt-4"
+                  type="submit"
+                  :disabled="submitStatus === 'PENDING'"
+                >
+                  Enviar
+                </button>
+              </div>
+            </form>
+
+            <!-- <div>
+                        <h2 v-if="user.nombre || user.email">{{user.nombre +' '+ user.email}}</h2>
+                    </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

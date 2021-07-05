@@ -1,0 +1,51 @@
+<!-- <div id="contenido"> -->
+<div class="container" style="min-height:500px">
+  <div class="vld-parent ">
+    <loading
+      :active.sync="isLoading"
+      :can-cancel="true"
+      :on-cancel="onCancel"
+      :is-full-page="fullPage"
+    ></loading>
+  </div>
+  <div class="row justify-content-md-center p-1 mt-3">
+    <div class="col-6 ">
+      <div
+        class="card "
+        style="min-height: 35rem; background-color: rgb(245, 252, 254)"
+      >
+        <div class="card-body">
+          <h2
+            class="text-center mt-3"
+          >
+            Event App
+          </h2>
+          <table id="table1" class="table " style="background:  rgb(245, 252, 254);">
+            <thead id="thead1">
+              <tr id="tr1">
+                <th>Carrera</th>
+                <th>Materia</th>
+                <th>Profesor</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                v-for="(t, index) in orderedTs"
+                v-bind:key="orderedTs.solicitud_id"
+              >
+                <td>{{ orderedTs[index].carrera}}</td>
+                <td>{{ orderedTs[index].materia}}</td>
+                <td>{{ orderedTs[index].docente}}</td>
+                <td>{{ orderedTs[index].dia}}</td>
+                <td>{{ orderedTs[index].horario.substring(0,5) }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
